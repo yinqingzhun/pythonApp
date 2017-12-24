@@ -34,15 +34,7 @@ list_2d = [1 for i in range(2)]
 tuple2 = (1)
 
 
-class a:
-    id = "98173489"
 
-    def getname(self):
-        return "a"
-
-    @classmethod
-    def echo(cls, input):
-        print('echo: ', input)
 
 
 strs = "for i in range(0,10): print(i)"
@@ -52,32 +44,6 @@ c = compile(strs, '', 'exec')
 def sqrt(p):
     return p ** 2
 
-
-class fooparent(object):
-    def __init__(self):
-        self.parent = 'i\'m the parent.'
-        print('parent init')
-
-    def bar(self, message):
-        print("bar from parent : %s" % message)
-
-
-class foochild(fooparent):
-    def __init__(self):
-        # 首先找到 foochild 的父类（就是类 fooparent），然后把类b的对象 foochild 转换为类 fooparent 的对象
-        super(foochild, self)
-        super(foochild, self).__init__()
-        print('child init')
-
-    def bar(self, message):
-        super(foochild, self).bar(message)
-        print('bar from child fuction : %s' % message)
-        print(self.parent)
-
-
-# if __name__ == '__main__':
-#     foochild = foochild()
-#     foochild.bar('helloworld')
 
 
 # 将匹配的数字乘于 2
@@ -149,3 +115,6 @@ print(Month)
 
 for i,e in Month._member_map_.items():
     print(i,e,sep=",    ")
+
+
+
